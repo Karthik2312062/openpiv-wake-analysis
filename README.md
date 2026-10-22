@@ -73,7 +73,3 @@ velocities or proof of wake recovery.
 ## Output
 - - [Download the downstream displacement profile](downstream_displacement_profile.csv)
 
-## Reproducibility
-The analysis is being developed in Google Colab. The notebook and figures
-should be committed alongside the output data, with the dataset source
-and applicable licence documented.
