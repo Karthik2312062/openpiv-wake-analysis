@@ -72,4 +72,11 @@ velocities or proof of wake recovery.
 
 ## Output
 - - [Download the downstream displacement profile](downstream_displacement_profile.csv)
+ 
+## Project Files
+
+- [Complete PIV analysis notebook](wake_analysis.ipynb)
+- [PIV displacement-field visualization](cleaned_piv_displacement.png)
+- [Downstream displacement profile (CSV)](downstream_displacement_profile.csv)
+- [Python dependencies](requirements.txt)
 
