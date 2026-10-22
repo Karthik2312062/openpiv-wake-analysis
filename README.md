@@ -51,7 +51,7 @@ velocities or proof of wake recovery.
   published benchmark before making physical claims.
 
 ## Output
-- `downstream_displacement_profile.csv`
+- - [Download the downstream displacement profile](downstream_displacement_profile.csv)
 
 ## Reproducibility
 The analysis is being developed in Google Colab. The notebook and figures
