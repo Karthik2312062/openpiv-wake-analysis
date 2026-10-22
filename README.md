@@ -24,6 +24,14 @@ variation downstream of the obstacle.
 7. Compare horizontal displacement across five neighbouring grid rows.
 8. Export the downstream profile statistics to CSV.
 
+## Reproducibility
+
+The complete Google Colab notebook, including the analysis workflow and code, is available here:
+
+- [Open the PIV analysis notebook](wake_analysis.ipynb)
+
+The notebook uses OpenPIV to estimate image-plane displacement, identify potential outliers, and examine a preliminary downstream displacement profile.
+
 ## Preliminary PIV Results
 
 The figure below shows the particle-image-velocimetry (PIV) displacement field after preliminary outlier correction. The vectors represent image-plane displacement in pixels per frame, not calibrated physical velocities.
@@ -34,7 +42,7 @@ The figure below shows the particle-image-velocimetry (PIV) displacement field a
 
 - [Download the downstream displacement profile (CSV)](downstream_displacement_profile.csv)
 - [View the PIV displacement-field plot](cleaned_piv_displacement.png)
-- 
+  
 
 ## Preliminary Processing Settings
 - Window size: 24 pixels
