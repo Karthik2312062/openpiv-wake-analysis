@@ -24,6 +24,18 @@ variation downstream of the obstacle.
 7. Compare horizontal displacement across five neighbouring grid rows.
 8. Export the downstream profile statistics to CSV.
 
+## Preliminary PIV Results
+
+The figure below shows the particle-image-velocimetry (PIV) displacement field after preliminary outlier correction. The vectors represent image-plane displacement in pixels per frame, not calibrated physical velocities.
+
+![PIV displacement field after preliminary outlier correction](cleaned_piv_displacement.png)
+
+### Output files
+
+- [Download the downstream displacement profile (CSV)](downstream_displacement_profile.csv)
+- [View the PIV displacement-field plot](cleaned_piv_displacement.png)
+- 
+
 ## Preliminary Processing Settings
 - Window size: 24 pixels
 - Search area size: 48 pixels
