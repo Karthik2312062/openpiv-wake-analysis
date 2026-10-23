@@ -72,6 +72,20 @@ velocities or proof of wake recovery.
 
 ## Output
 - - [Download the downstream displacement profile](downstream_displacement_profile.csv)
+
+## Limitations and Validation
+
+This project presents a preliminary particle image velocimetry (PIV) analysis of an image pair from the OpenPIV example dataset. The results should be interpreted as image-plane displacement estimates rather than calibrated flow velocities.
+
+- **Spatial calibration:** The physical distance represented by each pixel has not been established. Therefore, displacement values are reported in pixels per frame and cannot be converted into physical velocity units.
+- **Time calibration:** The time interval between the two images has not been verified independently. Consequently, velocity in m/s cannot be calculated reliably.
+- **Outlier correction:** Potentially anomalous vectors were identified and corrected using local estimates. These corrections are preliminary and have not been independently validated against ground-truth measurements.
+- **Downstream profile:** The horizontal displacement profile was extracted from selected rows near the estimated cylinder centreline. Its downstream trend is exploratory and does not, by itself, establish wake recovery.
+- **Measurement uncertainty:** The analysis has not yet been validated against published reference data or independent measurements. Sensitivity to interrogation-window parameters and image quality also remains to be assessed.
+
+### Planned Validation
+
+Future work will verify the image-pair timing and spatial scale where metadata are available, assess vector quality and sensitivity to processing parameters, and compare the resulting flow field with suitable reference data. Physical velocities and quantitative wake-recovery claims will be reported only after the necessary calibration and validation steps.
  
 ## Project Files
 
