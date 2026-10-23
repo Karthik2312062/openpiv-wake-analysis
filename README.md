@@ -61,17 +61,13 @@ between-row standard deviation of approximately 0.039 pixels per image pair.
 These are preliminary image-displacement statistics, not calibrated flow
 velocities or proof of wake recovery.
 
-## Limitations and Next Steps
-- Verify the dataset's provenance and the physical meaning of the image pair.
-- Establish the actual frame interval and spatial calibration before
-  calculating velocities in physical units.
-- Investigate masked regions and correlation quality near the obstacle.
-- Validate outlier detection and replacement against the raw measurements.
-- Compare the measured field with an appropriate reference dataset or
-  published benchmark before making physical claims.
 
 ## Output
 - - [Download the downstream displacement profile](downstream_displacement_profile.csv)
+
+### Preliminary Vector-Consistency Check
+
+Three unusually large displacement estimates were provisionally corrected using local estimates. Their corrected values differed from the medians of their surrounding vectors by 0.074, 0.074, and 0.101 pixels per frame, respectively. This indicates local consistency after correction, but does not independently establish measurement accuracy because the corrections were derived from neighbouring vectors. The original estimates should be retained for reproducibility, and the corrected values should be treated as provisional pending independent validation.
 
 ## Limitations and Validation
 
@@ -86,6 +82,15 @@ This project presents a preliminary particle image velocimetry (PIV) analysis of
 ### Planned Validation
 
 Future work will verify the image-pair timing and spatial scale where metadata are available, assess vector quality and sensitivity to processing parameters, and compare the resulting flow field with suitable reference data. Physical velocities and quantitative wake-recovery claims will be reported only after the necessary calibration and validation steps.
+
+## Limitations and Next Steps
+- Verify the dataset's provenance and the physical meaning of the image pair.
+- Establish the actual frame interval and spatial calibration before
+  calculating velocities in physical units.
+- Investigate masked regions and correlation quality near the obstacle.
+- Validate outlier detection and replacement against the raw measurements.
+- Compare the measured field with an appropriate reference dataset or
+  published benchmark before making physical claims.
  
 ## Project Files
 
