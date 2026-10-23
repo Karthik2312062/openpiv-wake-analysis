@@ -65,7 +65,7 @@ velocities or proof of wake recovery.
 ## Output
 - - [Download the downstream displacement profile](downstream_displacement_profile.csv)
 
-## Validation and Sensitivity analysis
+## Validation and Sensitivity Analysis
 
 ### Preliminary Vector-Consistency Check
 
@@ -73,15 +73,21 @@ Three unusually large displacement estimates were provisionally corrected using 
 
 ### Signal-to-Noise Quality Check
 
-A peak-to-peak signal-to-noise ratio (SNR) threshold of 1.3 flagged 25 of the 364 calculated displacement vectors (6.87%) for further scrutiny. Two vectors in the raw field were non-finite. SNR flagging indicates potentially ambiguous correlation peaks rather than confirmed measurement errors. These results provide a preliminary assessment of vector quality; they do not establish overall measurement accuracy. The threshold choice and its effect on the resulting displacement field should be evaluated in future sensitivity and validation studies.
+A peak-to-peak signal-to-noise ratio (SNR) threshold of 1.3 flagged 25 of the 364 calculated displacement vectors (6.87%) for further scrutiny. The flagged vectors were spatially clustered, particularly around x = 674–818 pixels. Two vectors returned an SNR of zero and require particular caution. SNR flagging indicates potentially ambiguous correlation peaks rather than confirmed measurement errors.
 
-### Signal-to-noise screening
+### Cylinder Masking and Fluid-Region Screening
 
-A peak-to-peak signal-to-noise ratio (SNR) threshold of 1.3 flagged 25 of the 364 displacement vectors (6.87%). The flagged vectors were spatially clustered, particularly in the region around x = 674–818 pixels, rather than being uniformly distributed. Two vectors returned an SNR of zero and require particular caution. These flags identify potentially ambiguous correlation estimates; they do not independently establish that a vector is erroneous.
+An approximate circular mask was applied around the cylinder, using an estimated centre of (720, 300) pixels and a radius of 60 pixels. Eight interrogation-window centres fell inside this mask, and all eight were flagged by the SNR criterion.
 
-### Interrogation-window sensitivity
+After excluding these eight centres, 17 of the remaining 356 fluid-region vectors (4.78%) were flagged for potentially ambiguous correlation peaks. These vectors were retained for further inspection rather than automatically discarded or replaced.
 
-The baseline configuration (24-pixel interrogation windows, 12-pixel overlap, and a 48-pixel search area) was compared with a finer configuration using 16-pixel windows, 8-pixel overlap, and a 32-pixel search area. Across 354 common valid locations, the median difference between displacement vectors was 0.1399 pixels per frame, while the 95th-percentile difference was 1.5157 pixels per frame. Several localized discrepancies were substantially larger, including locations with low baseline SNR. The results indicate that the estimated displacement field is sensitive to interrogation-window settings in certain regions. This comparison is a sensitivity assessment, not independent validation of either configuration.
+The mask is approximate, and classifying vectors by their centres does not fully account for interrogation windows that overlap the cylinder boundary. The flagged vectors should therefore be interpreted as candidates for further investigation, not as confirmed measurement errors.
+
+### Interrogation-Window Sensitivity
+
+The baseline configuration (24-pixel interrogation windows, 12-pixel overlap, and a 48-pixel search area) was compared with a finer configuration using 16-pixel windows, 8-pixel overlap, and a 32-pixel search area. Across 354 common valid locations, the median difference between displacement vectors was 0.1399 pixels per frame, while the 95th-percentile difference was 1.5157 pixels per frame.
+
+Several localized discrepancies were substantially larger, including locations with low baseline SNR. The results indicate that the estimated displacement field is sensitive to interrogation-window settings in certain regions. This comparison is a sensitivity assessment, not independent validation of either configuration.
 
 ## Limitations and Next Steps
 - Verify the dataset's provenance and the physical meaning of the image pair.
