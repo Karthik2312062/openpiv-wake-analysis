@@ -28,7 +28,7 @@ variation downstream of the obstacle.
 
 The complete Google Colab notebook, including the analysis workflow and code, is available here:
 
-- [Open the PIV analysis notebook](wake_analysis.ipynb)
+- [Open the PIV analysis notebook](wake_analysis(1).ipynb)
 
 The notebook uses OpenPIV to estimate image-plane displacement, identify potential outliers, and examine a preliminary downstream displacement profile.
 
@@ -40,7 +40,7 @@ The figure below shows the particle-image-velocimetry (PIV) displacement field a
 
 ### Output files
 
-- [Download the downstream displacement profile (CSV)](downstream_displacement_profile.csv)
+- [Download the downstream displacement profile (CSV)](downstream_displacement_profile(2).csv)
 - [View the PIV displacement-field plot](cleaned_piv_displacement.png)
   
 
