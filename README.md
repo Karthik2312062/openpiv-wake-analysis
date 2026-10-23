@@ -69,6 +69,10 @@ velocities or proof of wake recovery.
 
 Three unusually large displacement estimates were provisionally corrected using local estimates. Their corrected values differed from the medians of their surrounding vectors by 0.074, 0.074, and 0.101 pixels per frame, respectively. This indicates local consistency after correction, but does not independently establish measurement accuracy because the corrections were derived from neighbouring vectors. The original estimates should be retained for reproducibility, and the corrected values should be treated as provisional pending independent validation.
 
+### Signal-to-Noise Quality Check
+
+A peak-to-peak signal-to-noise ratio (SNR) threshold of 1.3 flagged 25 of the 364 calculated displacement vectors (6.87%) for further scrutiny. Two vectors in the raw field were non-finite. SNR flagging indicates potentially ambiguous correlation peaks rather than confirmed measurement errors. These results provide a preliminary assessment of vector quality; they do not establish overall measurement accuracy. The threshold choice and its effect on the resulting displacement field should be evaluated in future sensitivity and validation studies.
+
 ## Limitations and Validation
 
 This project presents a preliminary particle image velocimetry (PIV) analysis of an image pair from the OpenPIV example dataset. The results should be interpreted as image-plane displacement estimates rather than calibrated flow velocities.
